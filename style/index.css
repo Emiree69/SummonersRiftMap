@@ -22,11 +22,15 @@
     font-size: 80px;
     margin-bottom: 20px;
     color: #FFFCF7;
+    text-shadow: -1px 1px 0 #000,
+    1px 1px 0 #000
 }
 
 .begin-screen h4 {
     color: #E7BC71;
     font-size: 26px;
+    text-shadow: -1px 1px 0 black,
+    1px 1px 0 #000
 }
 
 .begin-screen button {
