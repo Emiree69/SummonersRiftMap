@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summoners Rift Map</title>
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <!--Begin screen-->
+    <div class="begin-screen">
+        <h4>Explore & Discover</h4>
+        <h1>Summoners Rift</h1>
+        <button id="enter-button">Enter</button>
+    </div>
+
+    <!-- Hamburger menu -->
+    <div class="topnav" id="topnav">
+        <a href="#home" class="active">*</a>
+        <div id="myLinks">
+            <a
+                onclick="openDiv('Top', 'The top position tends to remain isolated from the rest of the team due to greater playmaking potential near the Dragon pit which is located near the bottom lane. This means it is more focused around lane control and dominance over the opposing laner. Ideal champions for this position are those that are largely self-sufficient with tools to dominate in duels, scale by farming, or impact the map in other ways.', 'img/topbg.jpg')">Toplane</a>
+            <a
+                onclick="openDiv('Middle', 'The middle position provides the fastest income of gold and experience due to having the shortest path. Given that it is in the center of the map, it also has better access to other sectors on the map. Ideal champions for this position are those that are better able to take priority over the lane by having good wave clear.', 'img/midbg.jpg')">Midlane</a>
+            <a
+                onclick="openDiv('Bottom', 'The bottom position is heavily focused around fighting potential given that is in closer proximity to the Dragon pit where many fights take place over capture of the objective. Ideal champions for this position are those that excel in skirmishes.', 'img/botbg.jpg')">Toplane</a>
+            <a
+                onclick="openDiv('Nexus', 'The Nexus is a structure that serves as the primary objective in all game modes in League of Legends. The team that destroys the opposing team\'s Nexus wins the match. The Nexus has 5500 health and 20 health regeneration per second, and 0 for all other stats.', 'img/bluenexusbg.jpg')">Nexus</a>
+            <a
+                onclick="openDiv('Turret', 'Turrets, also called towers, are heavy fortifications that attack enemy units on sight. Turrets are a core component of League of Legends. They deal damage to enemies and provide vision to their team, allowing them to have static and persistent control over the battlefield. Turrets target one unit at a time and deal heavy damage. Teams must destroy enemy turrets to push their assault into enemy territory.', 'img/turretbg.jpeg')">Turret</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="hamburgerButton()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <!-- The map starts here -->
+    <div class="mapContainer" id="mapContainer">
+        <img src="img/summonersRiftBG.jpg" alt="map" style="width:100%">
+        <button class="btnBaron"
+            onclick="openDiv('Baron Nashor', 'An epic monster with a wide variety of team threatening attacks. Killing this monster grants the Hand of Baron buff to living members of your team, granting a large amount of attack damage and ability power as well as dramatically enhancing the power of nearby allied minions.', 'img/baronbg.jpg')">
+            <img src="img/baron.png" alt="Image">
+        </button>
+        <button class="btnDragon"
+            onclick="openDiv('Dragon pit', 'The dragon pit is one of the game\'s most unique jungle camps on Summoner\'s Rift as its occupant varies throughout a match of League of Legends, with even the initial spawn being determined at random. One of seven monsters may occupy the pit at any one time: Chemtech Drake, Cloud Drake, Hextech Drake, Infernal Drake, Mountain Drake, Ocean Drake, Elder Dragon', 'img/drakebg.jpg')">
+            <img src="img/dragon.png" alt="Image">
+        </button>
+        <button class="btnMidlane"
+            onclick="openDiv('Middle', 'The middle position provides the fastest income of gold and experience due to having the shortest path. Given that it is in the center of the map, it also has better access to other sectors on the map. Ideal champions for this position are those that are better able to take priority over the lane by having good wave clear.', 'img/midbg.jpg')">
+            <img src="img/midlane.png" alt="Image">
+        </button>
+        <button class="btnToplane"
+            onclick="openDiv('Top', 'The top position tends to remain isolated from the rest of the team due to greater playmaking potential near the Dragon pit which is located near the bottom lane. This means it is more focused around lane control and dominance over the opposing laner. Ideal champions for this position are those that are largely self-sufficient with tools to dominate in duels, scale by farming, or impact the map in other ways.', 'img/topbg.jpg')">
+            <img src="img/toplane.png" alt="Image">
+        </button>
+        <button class="btnBotlane"
+            onclick="openDiv('Bottom', 'The bottom position is heavily focused around fighting potential given that is in closer proximity to the Dragon pit where many fights take place over capture of the objective. Ideal champions for this position are those that excel in skirmishes.', 'img/botbg.jpg')">
+            <img src="img/botlane.png" alt="Image">
+        </button>
+        <button class="btnBlueNexus"
+            onclick="openDiv('Nexus', 'The Nexus is a structure that serves as the primary objective in all game modes in League of Legends. The team that destroys the opposing team\'s Nexus wins the match. The Nexus has 5500 health and 20 health regeneration per second, and 0 for all other stats.', 'img/bluenexusbg.jpg')">
+            <img src="img/nexus.png" alt="Image">
+        </button>
+        <button class="btnTurret"
+            onclick="openDiv('Turret', 'Turrets, also called towers, are heavy fortifications that attack enemy units on sight. Turrets are a core component of League of Legends. They deal damage to enemies and provide vision to their team, allowing them to have static and persistent control over the battlefield. Turrets target one unit at a time and deal heavy damage. Teams must destroy enemy turrets to push their assault into enemy territory.', 'img/turretbg.jpeg')">
+            <img src="img/turret.png" alt="Image">
+        </button>
+        <button class="btnGromp"
+            onclick="openDiv('Gromp', 'A monster based in the jungles of Summoner\'s Rift. A durable ranged monster. Likes to eat small insects, mushrooms, and people.', 'img/grompbg.jpg')">
+            <img src="img/gromp.png" alt="Image">
+        </button>
+        <button class="btnSteentjes"
+            onclick="openDiv('Krug camp', 'The Krug are a neutral Monster in the jungle of Summoner\'s Rift. A durable melee monster that splits into 4 Mini Krugs when killed.', 'img/krugbg.jpg')">
+            <img src="img/steentjes.png" alt="Image">
+        </button>
+        <button class="btnRaptor"
+            onclick="openDiv('Raptor camp', 'The Crimson Raptor and Raptor are neutral monsters on Summoner\'s Rift. The Raptor camp consists of one large Crimson Raptor and five lesser Raptors. Killing this camp awards gold and experience. A common nickname for the Raptors is chickens.', 'img/raptorbg.jpg')">
+            <img src="img/raptor.png" alt="Image">
+        </button>
+        <button class="btnRedbuff"
+            onclick="openDiv('Red Brambleback', 'Killing the Red Brambleback grants the Crest of Cinders, a buff which grants health regeneration out of combat and causes basic attacks to apply a slow and a burn that deals true damage over time.', 'img/redbuffbg.webp')">
+            <img src="img/fire.png" alt="Image">
+        </button>
+        <button class="btnBluebuff"
+            onclick="openDiv('Blue Sentinel', 'Killing the Blue Sentinel grants the Crest of Insight, a buff which grants increased mana regeneration (or energy regeneration) as well as ability haste.', 'img/bluebuffbg.webp')">
+            <img src="img/mana.png" alt="Image">
+        </button>
+        <button class="btnWolf"
+            onclick="openDiv('Murk Wolf camp', 'The Greater Murk Wolf and Murk Wolf are neutral monsters on Summoner\'s Rift. The Murk Wolf camp consists of one large Wolf Greater Murk Wolf and two lesser Murk Wolves. Killing this camp awards gold and experience.', 'img/wolfbg.webp')">
+            <img src="img/wolf.png" alt="Image">
+        </button>
+    </div>
+
+    <!--Popup box-->
+    <div id="popupDiv" style="display:none;">
+        <img id="popupimg" src="" alt="">
+        <h1 id="popupTitel"></h1>
+        <p id="popupText"></p>
+        <button id="popupButton" onclick="closeDiv()">Close</button>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
